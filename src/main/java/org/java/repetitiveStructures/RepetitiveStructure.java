@@ -21,5 +21,16 @@ public class RepetitiveStructure {
             System.out.println("Valor de I: " + i);
         }
 
+        //Test 3 -> Do-While
+        char s;
+        do {
+            double c = sc.nextDouble();
+            double f = 9.0 * c / 5.0 + 32;
+            System.out.printf("Temperatura em Farenheit: %.2f", f);
+            System.out.printf("Deseja repetir o teste? (y - sim / n - nao) : ");
+            s = sc.next().charAt(0);
+        } while (s != 'n');
+
+
     }
 }
