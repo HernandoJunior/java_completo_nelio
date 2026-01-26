@@ -18,16 +18,27 @@ public class ExamplesList {
         listString.add("Maria");
         listString.add("Eduarda");
 
-        //Print values in list
+        //Print values in listString
         for (String name : listString){
             System.out.println(name);
         }
 
+        System.out.println("----------------------------------");
+
         //Use predicate to remove values in list
         listString.removeIf(x -> x.charAt(0) == 'M');
 
-        //Print values in list
+        //Print values in listString
         for (String name : listString){
+            System.out.println(name);
+        }
+
+        System.out.println("----------------------------------");
+
+        //Filter elements by inital letter is 'A'
+        List<String> listFilter = listString.stream().filter(x -> x.charAt(0) == 'H').toList();
+
+        for (String name : listFilter){
             System.out.println(name);
         }
     }
